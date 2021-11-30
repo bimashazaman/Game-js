@@ -1,0 +1,47 @@
+body {
+  background-color: #1b1b1b;
+}
+
+img {
+  width: 160px;
+}
+
+.header {
+  background-color: #1b1b1b;
+  color: #c46210;
+  padding: 10px;
+  height: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+
+.interface {
+  background-color: #1b1b1b;
+  color: #c46210;
+  padding: 10px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+
+.player-info {
+  background-color: #1b1b1b;
+  color: #c46210;
+  padding: 10px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+
+a {
+  color: #c46210;
+}
