@@ -45,3 +45,20 @@ img {
 a {
   color: #c46210;
 }
+
+.player-name {
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.player-health {
+  font-size: 20px;
+}
+
+.player-mana {
+  font-size: 20px;
+}
+
+.player-strength {
+  font-size: 20px;
+}
