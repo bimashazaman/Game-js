@@ -17,6 +17,29 @@ let gameManager = {
       default:
         console.log('Error: No class selected')
     }
+    let interface = document.getElementById('interface')
+    interface.innerHTML = `
+        <div class="player-stats">
+            <div class="player-name">
+                <h2>${player.classType}</h2>
+            </div>
+            <div class="player-health">
+                <h2>${player.health}</h2>
+            </div>
+            <div class="player-mana">
+                <h2>${player.mana}</h2>
+            </div>
+            <div class="player-strength">
+                <h2>${player.strength}</h2>
+            </div>
+            <div class="player-agility">
+                <h2>${player.agility}</h2>
+            </div>
+            <div class="player-speed">
+                <h2>${player.speed}</h2>
+            </div>
+        </div>
+    `
   },
   setPreFight: function () {},
 }
