@@ -32,7 +32,7 @@ let gameManager = {
             <div class="player-name">
                 <h2>${player.classType}</h2>
             </div>
-            <div class="player-health">
+            <div class="health-player">
                 <h2>${player.health}</h2>
             </div>
             <div class="player-mana">
@@ -118,7 +118,7 @@ let gameManager = {
             <div class="enemy-name">
                 <h2>${enemy.classType}</h2>
             </div>
-            <div class="enemy-health">
+            <div class="health-enemy">
                 <h2>${enemy.health}</h2>
             </div>
             <div class="enemy-mana">  
