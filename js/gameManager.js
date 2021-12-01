@@ -106,7 +106,33 @@ let gameManager = {
     `
     getActions.innerHTML = `
         <div class="action-buttons">
-            <a href="#" class= "btn-prefight" onclick="gameManager.setFight()">Search Enemy</a>
+            <a href="#" class= "btn-prefight" onclick="playerMoves.calcAttact()">Attact</a>
+        </div>
+    `
+
+    getEnemy.innerHTML = `
+        <div class="enemy-img">
+          <img src="image/avatar-players/download(5).png" class="img-avatar">
+        </div>
+        <div class="enemy-stats">
+            <div class="enemy-name">
+                <h2>${enemy.classType}</h2>
+            </div>
+            <div class="enemy-health">
+                <h2>${enemy.health}</h2>
+            </div>
+            <div class="enemy-mana">  
+                <h2>${enemy.mana}</h2>
+            </div>
+            <div class="enemy-strength">
+                <h2>${enemy.strength}</h2>
+            </div>
+            <div class="enemy-agility">
+                <h2>${enemy.agility}</h2>
+            </div>
+            <div class="enemy-speed">
+                <h2>${enemy.speed}</h2>
+            </div>
         </div>
     `
   },
