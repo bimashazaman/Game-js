@@ -70,6 +70,39 @@ let playerMoves = {
       // player attacks
       let playerAttactValues = playerMoves.playerAttack()
       let totalDamage = playerAttactValues[0] * playerAttactValues[1]
-    }
+      enemy.health = enemy.health - totalDamage
+      alert('you hit the enemy for ' + totalDamage + ' damage' + '!')
+
+      if (enemy.health <= 0) {
+        alert('you win!')
+        getPlayerHealth.innerHTML = 'Health: ' + player.health
+        getEnemyHealth.innerHTML = 'Health: ' + enemy.health
+      } else {
+        // enemy attacks
+        let enemyAttactValues = playerMoves.enemyAttack()
+        let totalDamage = enemyAttactValues[0] * enemyAttactValues[1]
+        player.health = player.health - totalDamage
+        alert('the enemy hit you for ' + totalDamage + ' damage' + '!')
+
+        if (player.health <= 0) {
+          alert('you lose!')
+          getPlayerHealth.innerHTML = 'Health: ' + player.health
+          getEnemyHealth.innerHTML = 'Health: ' + enemy.health
+        } else {
+          getPlayerHealth.innerHTML = 'Health: ' + player.health
+          getEnemyHealth.innerHTML = 'Health: ' + enemy.health
+        }
+      } // end of if else
+    } // end of enemy attack
+
+    //   getEnemyGrowth.innerHTML = enemy.health
+    // } else {
+    //   // enemy attacks
+    //   let enemyAttactValues = playerMoves.enemyAttack()
+    //   let totalDamage = enemyAttactValues[0] * enemyAttactValues[1]
+    //   player.health = player.health - totalDamage
+    //   getPlayerGrowth.innerHTML = player.health
+
+    // }
   },
 }
