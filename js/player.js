@@ -60,7 +60,16 @@ let playerMoves = {
       let attactValues = [calcOutputDamage, numberOfHits]
       return attactValues
     }
+    // get player/enemy health
     let getPlayerGrowth = document.querySelector('.health-player')
     let getEnemyGrowth = document.querySelector('.health-enemy')
+
+    // initiate attacks
+
+    if (getPlayerSpeed >= getEnemySpeed) {
+      // player attacks
+      let playerAttactValues = playerMoves.playerAttack()
+      let totalDamage = playerAttactValues[0] * playerAttactValues[1]
+    }
   },
 }
