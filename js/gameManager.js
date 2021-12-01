@@ -23,8 +23,11 @@ let gameManager = {
       default:
         console.log('Error: No class selected')
     }
-    let interface = document.getElementById('interface')
+    let interface = document.querySelector('.interface')
     interface.innerHTML = `
+        <div class="player-img">
+          <img src="image/avatar-players/download(5).png" class="img-avatar">
+        </div>  
         <div class="player-stats">
             <div class="player-name">
                 <h2>${player.classType}</h2>
@@ -48,6 +51,47 @@ let gameManager = {
         
 
     `
+
+    console.log(interface)
   },
-  setPreFight: function () {},
+  setPreFight: function () {
+    let getHeader = document.querySelector('.header')
+    let getActions = document.querySelector('.actions')
+    let getArena = document.querySelector('.arena')
+
+    getHeader.innerHTML = `
+        <h1>${player.classType}</h1>
+        <p> Find an enemy to fight!</p>
+    `
+    getActions.innerHTML = `
+        <div class="action-buttons">
+            <a href="#" class= "btn-prefight" onclick="GameManager.setFight()">Search Enemy</a>
+        </div>
+    `
+    getArena.innerHTML = `
+        <div class="enemy-img">
+          <img src="image/avatar-players/download(5).png" class="img-avatar">
+        </div>
+        <div class="enemy-stats">
+            <div class="enemy-name">
+                <h2>${enemy.classType}</h2>
+            </div>
+            <div class="enemy-health">
+                <h2>${enemy.health}</h2>
+            </div>
+            <div class="enemy-mana">
+                <h2>${enemy.mana}</h2>
+            </div>
+            <div class="enemy-strength">
+                <h2>${enemy.strength}</h2>
+            </div>
+            <div class="enemy-agility"> 
+                <h2>${enemy.agility}</h2>
+            </div>
+            <div class="enemy-speed">
+                <h2>${enemy.speed}</h2>
+            </div>
+        </div>
+    `
+  },
 }
