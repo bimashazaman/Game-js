@@ -65,7 +65,7 @@ let gameManager = {
     `
     getActions.innerHTML = `
         <div class="action-buttons">
-            <a href="#" class= "btn-prefight" onclick="GameManager.setFight()">Search Enemy</a>
+            <a href="#" class= "btn-prefight" onclick="gameManager.setFight()">Search Enemy</a>
         </div>
     `
 
@@ -82,7 +82,32 @@ let gameManager = {
     let enemy00 = new Enemy('Goblin', 100, 100, 10, 10, 10)
     let enemy01 = new Enemy('Troll', 100, 100, 10, 10, 10)
     let enemy02 = new Enemy('Orc', 100, 100, 10, 10, 10)
-    let enemy03 = new Enemy('Skeleton', 100, 100, 10, 10, 10)
-    let enemy04 = new Enemy('Zombie', 100, 100, 10, 10, 10)
+
+    let ChooseRandomEnemy = Math.floor(Math.random() * Math.floor(2))
+    // console.log(ChooseRandomEnemy)
+
+    switch (ChooseRandomEnemy) {
+      case 0:
+        enemy = enemy00
+        break
+      case 1:
+        enemy = enemy01
+        break
+      case 2:
+        enemy = enemy02
+        break
+      default:
+        console.log('Error: No enemy selected')
+    }
+
+    getHeader.innerHTML = `
+        <h1>${player.classType}</h1>
+        <p> You have encountered a ${enemy.classType}</p>
+    `
+    getActions.innerHTML = `
+        <div class="action-buttons">
+            <a href="#" class= "btn-prefight" onclick="gameManager.setFight()">Search Enemy</a>
+        </div>
+    `
   },
 }
