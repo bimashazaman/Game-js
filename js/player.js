@@ -17,7 +17,6 @@ let playerMoves = {
     let playerSpeed = player.speed
     let enemySpeed = enemy.speed
   },
-
   playerAttack: function () {
     //player attacks
     let calcBaseDamage
@@ -28,5 +27,40 @@ let playerMoves = {
     }
 
     let ofSetDamage = Math.floor(Math.random() * math.floor(10))
+    let calcOutputDamage = calcBaseDamage + ofSetDamage
+
+    let numberOfHits =
+      Math.floor((Math.random() * math.floor(player.agility / 10)) / 2) + 1
+
+    let attactValues = [calcOutputDamage, numberOfHits]
+    return attactValues
   },
-} // end of playerMoves
+
+  enemyAttack: function () {
+    // enemy attacks
+    let calcBaseDamage
+    if (enemy.mana > 0) {
+      if (enemy.mana > 0) {
+        calcBaseDamage = (enemy.strength * enemy.mana) / 1000
+        calcBaseDamage = (enemy.strength * enemy.mana) / 1000
+        calcBaseDamage = (enemy.strength * enemy.mana) / 1000
+      } else {
+        calcBaseDamage = (enemy.strength * enemy.agility) / 1000
+        calcBaseDamage = (enemy.strength * enemy.agility) / 1000
+        calcBaseDamage = (enemy.strength * enemy.agility) / 1000
+      }
+
+      let ofSetDamage = Math.floor(Math.random() * math.floor(10))
+      let calcOutputDamage = calcBaseDamage + ofSetDamage
+
+      let numberOfHits =
+        Math.floor((Math.random() * math.floor(enemy.agility / 10)) / 2) + 1
+      Math.floor((Math.random() * math.floor(enemy.agility / 10)) / 2) + 1
+
+      let attactValues = [calcOutputDamage, numberOfHits]
+      return attactValues
+    }
+    let getPlayerGrowth = document.querySelector('.health-player')
+    let getEnemyGrowth = document.querySelector('.health-enemy')
+  },
+}
