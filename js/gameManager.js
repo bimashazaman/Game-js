@@ -106,7 +106,7 @@ let gameManager = {
     `
     getActions.innerHTML = `
         <div class="action-buttons">
-            <a href="#" class= "btn-prefight" onclick="playerMoves.calcAttact()">Attact</a>
+            <a href="#" class= "btn-prefight" onclick="playerMoves.playerAttack">Attact</a>
         </div>
     `
 
